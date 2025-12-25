@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Vila Falco</title>
+    <meta name="description" content="Kontaktujte nás - radi zodpovieme všetky vaše otázky o ubytovaní vo Vile Falco.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="index.html" class="logo">Vila Falco</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="ubytovanie.html">Ubytovanie</a></li>
+                <li><a href="lokalita.html">Lokalita</a></li>
+                <li><a href="cennik.html">Cenník</a></li>
+                <li><a href="rezervacia.html">Rezervácia</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Kontakt</h1>
+            <p class="page-subtitle">Sme tu pre vás - radi zodpovieme všetky vaše otázky</p>
+
+            <div class="content-section" style="margin-bottom: 4rem;">
+                <div class="content-text">
+                    <h2>Kontaktné informácie</h2>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">📍 Adresa</h3>
+                        <p style="font-size: 1.1rem;">
+                            Vila Falco<br>
+                            Horný Smokovec<br>
+                            062 01 Vysoké Tatry<br>
+                            Slovensko
+                        </p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">📧 Email</h3>
+                        <p style="font-size: 1.1rem;">
+                            <a href="mailto:info@vilafalco.sk" style="color: var(--color-primary); text-decoration: none;">info@vilafalco.sk</a>
+                        </p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">📱 Telefón</h3>
+                        <p style="font-size: 1.1rem;">
+                            +421 XXX XXX XXX<br>
+                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Denne 9:00 - 20:00</span>
+                        </p>
+                    </div>
+
+                    <div style="margin: 2rem 0;">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">⏰ Otváracie hodiny</h3>
+                        <p style="font-size: 1.1rem;">
+                            Check-in: 14:00 - 20:00<br>
+                            Check-out: 08:00 - 10:00<br>
+                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Iné časy po predchádzajúcej dohode</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800" alt="Kontakt" class="content-image">
+                    
+                    <div style="margin-top: 2rem; padding: 2rem; background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(61, 90, 76, 0.05));">
+                        <h3 style="color: var(--color-primary); margin-bottom: 1rem;">🚗 Ako sa k nám dostanete?</h3>
+                        <p style="color: var(--color-text-light); line-height: 1.8;">
+                            <strong>Autom:</strong> Diaľnica D1, exit Poprad, smer Vysoké Tatry. Následne cesta č. 67 smer Starý Smokovec. GPS súradnice dostupné na požiadanie.<br><br>
+                            <strong>Vlakom:</strong> Železničná stanica Starý Smokovec, 5 minút chôdzou.<br><br>
+                            <strong>Autobusom:</strong> Zastávka Starý Smokovec, 5 minút chôdzou.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 style="font-family: var(--font-display); font-size: 2rem; text-align: center; margin-bottom: 2rem; color: var(--color-primary);">Napíšte nám</h2>
+                
+                <form action="#" method="POST" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Meno a priezvisko *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefón</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Predmet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Vyberte predmet</option>
+                            <option value="general">Všeobecný dotaz</option>
+                            <option value="booking">Otázka k rezervácii</option>
+                            <option value="pricing">Otázka k cenám</option>
+                            <option value="facilities">Otázka k vybaveniu</option>
+                            <option value="location">Otázka k lokalite</option>
+                            <option value="other">Iné</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Vaša správa *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Napíšte nám vašu otázku alebo pripomienku..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Odoslať správu</button>
+                </form>
+
+                <p style="text-align: center; margin-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+                    Odpovieme vám do 24 hodín v pracovné dni.
+                </p>
+            </div>
+
+            <div style="background: white; padding: 3rem; margin: 4rem 0; border: 1px solid rgba(212, 165, 116, 0.2);">
+                <h2 style="font-family: var(--font-display); font-size: 2rem; text-align: center; margin-bottom: 2rem; color: var(--color-primary);">Často kladené otázky</h2>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212, 165, 116, 0.1);">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Je možné prísť skôr alebo odísť neskôr?</h3>
+                        <p style="color: var(--color-text-light);">Áno, skorší check-in alebo neskorší check-out je možný po predchádzajúcej dohode a v závislosti od dostupnosti. Kontaktujte nás vopred.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212, 165, 116, 0.1);">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Je parkovanie zadarmo?</h3>
+                        <p style="color: var(--color-text-light);">Áno, parkovanie priamo pri dome je pre našich hostí úplne bezplatné.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212, 165, 116, 0.1);">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Poskytujete raňajky?</h3>
+                        <p style="color: var(--color-text-light);">Raňajky nie sú v cene zahrnuté, ale máte k dispozícii plne vybavenú kuchyňu, kde si ich môžete pripraviť sami. Na požiadanie vám radi doporučíme blízke reštaurácie.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212, 165, 116, 0.1);">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Prijímate platobné karty?</h3>
+                        <p style="color: var(--color-text-light);">Akceptujeme hotovosť a bankový prevod. Pri rezervácii je potrebná záloha 30%.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212, 165, 116, 0.1);">
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Sú v cene zahrnuté energie?</h3>
+                        <p style="color: var(--color-text-light);">Áno, všetky energie (elektrická energia, voda, vykurovanie) sú v cene zahrnuté.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">Je k dispozícii Wi-Fi?</h3>
+                        <p style="color: var(--color-text-light);">Áno, rýchle Wi-Fi pripojenie je k dispozícii v celom ubytovaní zadarmo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 5rem 0;">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-primary);">Pripravení na nezabudnuteľný pobyt?</h2>
+                <p style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--color-text-light);">Tešíme sa na vašu návštevu vo Vysokých Tatrách!</p>
+                <a href="rezervacia.html" class="cta-button">Rezervovať teraz</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Vila Falco</h3>
+                <p>Súkromné ubytovanie<br>
+                Horný Smokovec<br>
+                Vysoké Tatry, Slovensko</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Rýchle odkazy</h3>
+                <a href="ubytovanie.html">Ubytovanie</a>
+                <a href="lokalita.html">Lokalita</a>
+                <a href="cennik.html">Cenník</a>
+                <a href="rezervacia.html">Rezervácia</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@vilafalco.sk<br>
+                Tel: +421 XXX XXX XXX</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vila Falco. Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            alert('Ďakujeme za vašu správu! V skutočnom nasadení by ste mali nastaviť odoslanie formulára na váš email. Odpovieme vám do 24 hodín.');
+            // V skutočnosti tu pripojíte formulár na váš backend alebo email službu
+        }
+    </script>
+</body>
+</html>
